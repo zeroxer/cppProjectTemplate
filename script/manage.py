@@ -94,9 +94,11 @@ def buildProject(arch, isDebug):
 def runProject(arch, isDebug=False):
     # print('[Info] run project:', arch)
     if isDebug:
-        os.system('call ' + buildDebugDir + '/mainApp.exe')
+        os.chdir(buildDebugDir)
+        os.system('call mainApp.exe')
     else:
-        os.system('call ' + buildReleaseDir + '/mainApp.exe')
+        os.chdir(buildReleaseDir)
+        os.system('call mainApp.exe')
 
 def debugProject(arch):
     print('[Info] debug project:', arch)
