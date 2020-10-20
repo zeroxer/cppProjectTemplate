@@ -63,7 +63,9 @@ def buildProject(arch, isDebug):
     # - mainCRTStartup (or wmainCRTStartup)
     # - WinMainCRTStartup (or wWinMainCRTStartup)
     if isDebug: # Debug
-        print('Debug Mode --- Debug Debug Debug')
+        print('==========================================')
+        print('|               Debug Mode               |')
+        print('==========================================')
         if not os.path.exists(buildDebugDir):
             os.mkdir(buildDebugDir)
         os.chdir(buildDebugDir)
@@ -71,7 +73,9 @@ def buildProject(arch, isDebug):
         os.system('link /out:mainApp.exe /ENTRY:mainCRTStartup /SUBSYSTEM:CONSOLE /machine:x64 /DEBUG *.obj user32.lib gdi32.lib')
 
     else: # Release
-        print('Release Mode --- Release Release Release')
+        print('==========================================')
+        print('|              Release Mode              |')
+        print('==========================================')
         if not os.path.exists(buildReleaseDir):
             os.mkdir(buildReleaseDir)
         os.chdir(buildReleaseDir)
