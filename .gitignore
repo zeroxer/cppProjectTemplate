@@ -1,6 +1,8 @@
 .vscode/
 .Build/
 .vs/
+bin/
+export/
 
 # Prerequisites
 *.d
