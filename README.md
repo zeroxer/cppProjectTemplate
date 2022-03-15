@@ -1,18 +1,20 @@
 # Cpp Project Template
 
+A python tool which can simplify your C++ CMake project init and development.
+
 # Usage
 
+## Build
 ```shell
-scoop install miniconda3
-conda create --name cppProjectTemplate python=3.7
-conda activate cppProjectTemplate
-pip install -r requirements.txt
-b # build project
-r # run project
-a # rebuild and run
+b.bat
 ```
 
-# Doc
+## Publish
 ```shell
-pip freeze > requirements.txt
+p.bat
+```
+
+## Test
+```shell
+test.bat
 ```
